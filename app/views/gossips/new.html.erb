@@ -1,0 +1,31 @@
+<h1 >Tell us some new stories !</h1>
+
+</br>
+
+<%= form_tag gossips_path(action: "create"), method: "post" do %>
+
+    <%= label_tag "Title:" %> </br>
+    <%= text_field_tag "title", @title %>
+    <br /> <br />
+
+    <%= label_tag "Content:" %> </br>
+    <%= text_area_tag "content", @content %>
+    <br /> <br />
+
+    <%= submit_tag "Create a gossip" %>
+      
+<% end %>
+
+    </br>
+
+    <% if @post.errors.any? %>
+        <p>Unable to create a gossip:</p>
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+            <div class="alert alert-danger" role="alert">
+            <li><%= message %></li>
+            </div>
+    <% end %>
+        </ul>
+
+<% end %>

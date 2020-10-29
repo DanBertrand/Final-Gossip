@@ -1,0 +1,10 @@
+<h5 > Gossip n°<%= @gossip %>: </h5> </br>
+<p> <%=@gossip_id.title %> </p> </br>
+<p> The author is: <%= link_to "#{@gossip_id.user.first_name}", author_path(@gossip)%> and living in <%=@author.city.name%> </p>
+<p> <%=@gossip_id.created_at %> </p> </br>
+<p><U>Content:</U> </p> </br>
+<p> <%=@gossip_id.content %> </p> </br>
+
+<%= link_to 'Delete the gossip', @gossip, data: {:confirm => 'Are you sure?'}, :method => :delete %>
+
+

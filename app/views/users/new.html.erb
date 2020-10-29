@@ -1,0 +1,39 @@
+<h1 >Welcome on our website. Just few more step before creating your account</h1>
+
+</br>
+
+<%= form_tag users_path(action: "create"), method: "post" do %>
+
+    <%= label_tag "first_name:" %> </br>
+    <%= text_field_tag "first_name", @first_name %>
+    <br /> <br />
+
+    <%= label_tag "last_name:" %> </br>
+    <%= text_area_tag "last_name", @last_name %>
+    <br /> <br />
+
+    <%= label_tag "age:" %> </br>
+    <%= text_area_tag "age", @age %>
+    <br /> <br />
+
+    <%= label_tag "description:" %> </br>
+    <%= text_area_tag "description", @description %>
+    <br /> <br />
+
+    <%= label_tag "email:" %> </br>
+    <%= text_area_tag "email", @email %>
+    <br /> <br />
+
+    <%= label_tag "password:" %> </br>
+    <%= text_area_tag "password", @password %>
+    <br /> <br />
+
+    <%= label_tag "password_confirmation:" %> </br>
+    <%= text_area_tag "password_confirmation", @password_confirmation %>
+    <br /> <br />
+
+    <%= submit_tag "Create an account" %>
+      
+<% end %>
+
+    </br>

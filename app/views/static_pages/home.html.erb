@@ -1,0 +1,29 @@
+<h1 >Welcome</h1>
+
+
+<div style="margin-left: 40px; margin-bottom: 20px;" hover"">
+    <%= link_to "Tell us your new gossip", gossips_new_path %>
+</div>
+
+<div class="card-columns">
+
+    <% Gossip.count.times do |i| %>
+        <% begin %>
+    
+        <div class="card">
+            <div class="card-body">
+            <h5 class="card-title"><%= link_to "#{Gossip.find(i+1).user.first_name}",author_path(Gossip.find(i+1).id) %></h5>
+            <p class="card-text"><%= Gossip.find(i+1).title %></p>
+            <%= link_to "see more", gossip_path(Gossip.find(i+1).id), class:"card-link" %>
+            </div>
+        </div> 
+
+        <% rescue
+            next  %>         
+    <% end %>
+   <% end %>
+</div>
+
+        
+        
+

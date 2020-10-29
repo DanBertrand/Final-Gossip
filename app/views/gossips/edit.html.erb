@@ -1,0 +1,24 @@
+<h1>Here you can edit your gossip!</h1>
+
+</br>
+
+
+
+
+<%=  form_for @model do |f| %>
+
+    <div class="form-group">
+        <label>Title</label>
+        <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <label>Title</label>
+        <%= f.text_field :content, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <button type="submit">Edit the gossip</button>>
+    </div>
+
+<% end %>
+
+
